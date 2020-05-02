@@ -1,0 +1,20 @@
+---
+layout: default
+title: Sparanoid
+title_no_desc: true
+permalink: /
+---
+
+<!-- Article wrapper, limit width -->
+<article>
+
+  <!-- Post title -->
+  <header>
+    <h1>
+      Sparanoid
+      {% for post in site.categories.work limit:1 %}
+        recently made <a href="{{ post.url | relative_url }}" class=latest>{{ post.title }}</a>
+      {% endfor %}
+    </h1>
+  </header>
+</article>

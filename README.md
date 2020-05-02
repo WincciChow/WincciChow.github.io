@@ -1,25 +1,30 @@
-Freelancer Jekyll theme  [![Build Status](https://api.travis-ci.org/jeromelachaud/freelancer-theme.svg?branch=master)](https://travis-ci.org/jeromelachaud/freelancer-theme/) 
-=========================
+# Sparanoid
+[![Built with Almace Scaffolding](https://d349cztnlupsuf.cloudfront.net/amsf-badge.svg)](https://sparanoid.com/lab/amsf/)
+[![CircleCI](https://circleci.com/gh/sparanoid/sparanoid.com.svg?style=svg)](https://circleci.com/gh/sparanoid/sparanoid.com)
+[![devDependency Status](https://david-dm.org/sparanoid/sparanoid.com/dev-status.svg)](https://david-dm.org/sparanoid/sparanoid.com#info=devDependencies)
 
-Jekyll theme based on [Freelancer bootstrap theme ](http://startbootstrap.com/template-overviews/freelancer/)
+[Almace Scaffolding](https://github.com/sparanoid/almace-scaffolding/) running on [sparanoid.com](https://sparanoid.com/).
 
-## Start from here
- - Place a image in `/img/portfolio/`
- - Replace `your-email@domain.com` in `_config.yml` with your email address. Refer to [formspree](http://formspree.io/) for more information.
- - Create posts to display your projects. Use the follow as an example:
-```txt
----
-layout: default
-modal-id: 1
-date: 2014-07-18
-img: cabin.png
-alt: image-alt
-project-date: July 2014
-client: The Client
-category: Web Development
-description: The description of the project
+## Setup
 
----
+```sh
+$ bundle install && yarn && grunt serve
 ```
 
+## Author
 
+**Tunghsiao Liu**
+
+- Twitter: @[tunghsiao](https://twitter.com/tunghsiao)
+- GitHub: @[sparanoid](https://github.com/sparanoid)
+
+## Licenses
+
+Following files, directories and their contents are copyright Tunghsiao Liu and licensed under a [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/). You may not reuse anything therein without permission:
+
+- `./_app/_posts/**`
+- `./_app/*.{svg,png}`
+
+All other files and directories are licensed under the [MIT](https://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
+
+© Sparanoid, Inc., rights reserved as indicated above.
