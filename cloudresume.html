@@ -1,0 +1,479 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+    <title>3d cloud resume</title>  
+    <meta name="description" content="resume design by js 3d cloud tag,hover to show">  
+</head>  
+<body>  
+  
+<style type="text/css">  
+    * {  
+        margin: 0;  
+        padding: 0;  
+        list-style-type: none;  
+    }  
+  
+    a, img {  
+        border: 0;  
+    }  
+  
+    body {  
+        background: #00cccc;  
+    }  
+  
+    textarea.hidden {display:none;} 
+    #rotate {  
+        height: 400px;  
+        width: 450px;  
+        position: relative;  
+        margin: 10px auto;  
+    }  
+  
+    #rotate a {  
+        position: absolute;  
+        top: 0px;  
+        left: 0px;  
+        color: #fff;  
+        font-weight: bold;  
+        padding: 3px 6px;  
+        font-size: 14px;  
+    }  
+  
+    #rotate a:hover {  
+        border: 1px solid #eee;  
+        background: #000;  
+        border-radius: 5px;  
+    }  
+</style>  
+  
+<script type="text/javascript">  
+    var radius = 150;  
+    var dtr = Math.PI/180;  
+    var d=300;  
+  
+    var mcList = [];  
+    var active = false;  
+    var lasta = 1;  
+    var lastb = 1;  
+    var distr = true;  
+    var tspeed=2;  
+    var size=250;  
+  
+    var mouseX=0;  
+    var mouseY=0;  
+  
+    var howElliptical=1;  
+  
+    var aA=null;  
+    var oDiv=null;  
+  
+    window.onload=function ()  
+    {  
+        var i=0;  
+        var oTag=null;  
+  
+        oDiv=document.getElementById('rotate');  
+  
+        aA=oDiv.getElementsByTagName('a');  
+  
+        for(i=0;i<aA.length;i++)  
+        {  
+            oTag={};  
+  
+            oTag.offsetWidth=aA[i].offsetWidth;  
+            oTag.offsetHeight=aA[i].offsetHeight;  
+  
+            mcList.push(oTag);  
+        }  
+  
+        sineCosine( 0,0,0 );  
+  
+        positionAll();  
+  
+        oDiv.onmouseover=function ()  
+        {  
+            active=true;  
+        };  
+  
+        oDiv.onmouseout=function ()  
+        {  
+            active=false;  
+        };  
+  
+        oDiv.onmousemove=function (ev)  
+        {  
+            var oEvent=window.event || ev;  
+  
+            mouseX=oEvent.clientX-(oDiv.offsetLeft+oDiv.offsetWidth/2);  
+            mouseY=oEvent.clientY-(oDiv.offsetTop+oDiv.offsetHeight/2);  
+  
+            mouseX/=5;  
+            mouseY/=5;  
+        };  
+  
+        setInterval(update, 30);  
+    };  
+  
+    function update()  
+    {  
+        var a;  
+        var b;  
+  
+        if(active)  
+        {  
+            a = (-Math.min( Math.max( -mouseY, -size ), size ) / radius ) * tspeed;  
+            b = (Math.min( Math.max( -mouseX, -size ), size ) / radius ) * tspeed;  
+        }  
+        else  
+        {  
+            a = lasta * 0.98;  
+            b = lastb * 0.98;  
+        }  
+  
+        lasta=a;  
+        lastb=b;  
+  
+        if(Math.abs(a)<=0.01 && Math.abs(b)<=0.01)  
+        {  
+            return;  
+        }  
+  
+        var c=0;  
+        sineCosine(a,b,c);  
+        for(var j=0;j<mcList.length;j++)  
+        {  
+            var rx1=mcList[j].cx;  
+            var ry1=mcList[j].cy*ca+mcList[j].cz*(-sa);  
+            var rz1=mcList[j].cy*sa+mcList[j].cz*ca;  
+  
+            var rx2=rx1*cb+rz1*sb;  
+            var ry2=ry1;  
+            var rz2=rx1*(-sb)+rz1*cb;  
+  
+            var rx3=rx2*cc+ry2*(-sc);  
+            var ry3=rx2*sc+ry2*cc;  
+            var rz3=rz2;  
+  
+            mcList[j].cx=rx3;  
+            mcList[j].cy=ry3;  
+            mcList[j].cz=rz3;  
+  
+            per=d/(d+rz3);  
+  
+            mcList[j].x=(howElliptical*rx3*per)-(howElliptical*2);  
+            mcList[j].y=ry3*per;  
+            mcList[j].scale=per;  
+            mcList[j].alpha=per;  
+  
+            mcList[j].alpha=(mcList[j].alpha-0.6)*(10/6);  
+        }  
+  
+        doPosition();  
+        depthSort();  
+    }  
+  
+    function depthSort()  
+    {  
+        var i=0;  
+        var aTmp=[];  
+  
+        for(i=0;i<aA.length;i++)  
+        {  
+            aTmp.push(aA[i]);  
+        }  
+  
+        aTmp.sort  
+        (  
+                function (vItem1, vItem2)  
+                {  
+                    if(vItem1.cz>vItem2.cz)  
+                    {  
+                        return -1;  
+                    }  
+                    else if(vItem1.cz<vItem2.cz)  
+                    {  
+                        return 1;  
+                    }  
+                    else  
+                    {  
+                        return 0;  
+                    }  
+                }  
+        );  
+  
+        for(i=0;i<aTmp.length;i++)  
+        {  
+            aTmp[i].style.zIndex=i;  
+        }  
+    }  
+  
+    function positionAll()  
+    {  
+        var phi=0;  
+        var theta=0;  
+        var max=mcList.length;  
+        var i=0;  
+  
+        var aTmp=[];  
+        var oFragment=document.createDocumentFragment();  
+  
+     
+        for(i=0;i<aA.length;i++)  
+        {  
+            aTmp.push(aA[i]);  
+        }  
+  
+        aTmp.sort  
+        (  
+                function ()  
+                {  
+                    return Math.random()<0.5?1:-1;  
+                }  
+        );  
+  
+        for(i=0;i<aTmp.length;i++)  
+        {  
+            oFragment.appendChild(aTmp[i]);  
+        }  
+  
+        oDiv.appendChild(oFragment);  
+  
+        for( var i=1; i<max+1; i++){  
+            if( distr )  
+            {  
+                phi = Math.acos(-1+(2*i-1)/max);  
+                theta = Math.sqrt(max*Math.PI)*phi;  
+            }  
+            else  
+            {  
+                phi = Math.random()*(Math.PI);  
+                theta = Math.random()*(2*Math.PI);  
+            }  
+            //����任  
+            mcList[i-1].cx = radius * Math.cos(theta)*Math.sin(phi);  
+            mcList[i-1].cy = radius * Math.sin(theta)*Math.sin(phi);  
+            mcList[i-1].cz = radius * Math.cos(phi);  
+  
+            aA[i-1].style.left=mcList[i-1].cx+oDiv.offsetWidth/2-mcList[i-1].offsetWidth/2+'px';  
+            aA[i-1].style.top=mcList[i-1].cy+oDiv.offsetHeight/2-mcList[i-1].offsetHeight/2+'px';  
+        }  
+    }  
+  
+    function doPosition()  
+    {  
+        var l=oDiv.offsetWidth/2;  
+        var t=oDiv.offsetHeight/2;  
+        for(var i=0;i<mcList.length;i++)  
+        {  
+            aA[i].style.left=mcList[i].cx+l-mcList[i].offsetWidth/2+'px';  
+            aA[i].style.top=mcList[i].cy+t-mcList[i].offsetHeight/2+'px';  
+  
+            aA[i].style.fontSize=Math.ceil(12*mcList[i].scale/2)+8+'px';  
+  
+            aA[i].style.filter="alpha(opacity="+100*mcList[i].alpha+")";  
+            aA[i].style.opacity=mcList[i].alpha;  
+        }  
+    }  
+  
+    function sineCosine( a, b, c)  
+    {  
+        sa = Math.sin(a * dtr);  
+        ca = Math.cos(a * dtr);  
+        sb = Math.sin(b * dtr);  
+        cb = Math.cos(b * dtr);  
+        sc = Math.sin(c * dtr);  
+        cc = Math.cos(c * dtr);  
+    }  
+</script>  
+<!--script for onclick-->
+
+<script language="javascript">
+               function alertWin(title, msg, w, h)
+               {
+                   var titleheight = "22px"; // 提示窗口标题高度
+                   var bordercolor = "#beb6d7"; // 提示窗口的边框颜色
+                  var titlecolor = "#FFFFFF"; // 提示窗口的标题颜色
+                  var titlebgcolor = "#beb6d7"; // 提示窗口的标题背景色
+                  var bgcolor = "#FFFFFF"; // 提示内容的背景色
+              
+                  var iWidth = document.documentElement.clientWidth;
+                  var iHeight = document.documentElement.clientHeight;
+                  var bgObj = document.createElement("div");
+                  bgObj.style.cssText = "position:absolute;left:0px;top:0px;width:"+iWidth+"px;height:"+Math.max(document.body.clientHeight, iHeight)+"px;filter:Alpha(Opacity=30);opacity:0.3;background-color:#000000;z-index:101;";
+                  document.body.appendChild(bgObj);
+              
+                  var msgObj=document.createElement("div");
+                  msgObj.style.cssText = "position:absolute;font:11px 'monospace';top:"+(iHeight-h)/2+"px;left:"+(iWidth-w)/2+"px;width:"+w+"px;height:"+h+"px;text-align:center;border:1px solid "+bordercolor+";background-color:"+bgcolor+";padding:1px;line-height:22px;z-index:102;";
+                  document.body.appendChild(msgObj);
+              
+                 var table = document.createElement("table"); 
+                  msgObj.appendChild(table);
+                  table.style.cssText = "margin:0px;border:0px;padding:0px;";
+                  table.cellSpacing = 0;
+                  var tr = table.insertRow(-1);
+                  var titleBar = tr.insertCell(-1);
+                  titleBar.style.cssText = "width:100%;height:"+titleheight+"px;text-align:left;padding:3px;margin:0px;font:bold 13px '宋体';color:"+titlecolor+";border:1px solid " + bordercolor + ";cursor:move;background-color:" + titlebgcolor;
+                  titleBar.style.paddingLeft = "10px";
+                  titleBar.innerHTML = title;
+                  var moveX = 0;
+                  var moveY = 0;
+                  var moveTop = 0;
+                  var moveLeft = 0;
+                  var moveable = false;
+                  var docMouseMoveEvent = document.onmousemove; 
+                  var docMouseUpEvent = document.onmouseup;
+                  titleBar.onmousedown = function() 
+                  {
+                      var evt = getEvent();
+                      moveable = true;
+                      moveX = evt.clientX;
+                      moveY = evt.clientY;
+                      moveTop = parseInt(msgObj.style.top);
+                      moveLeft = parseInt(msgObj.style.left);
+                  
+                      document.onmousemove = function() 
+                      {
+                          if (moveable) 
+                          {
+                              var evt = getEvent();
+                              var x = moveLeft + evt.clientX - moveX; 
+                              var y = moveTop + evt.clientY - moveY;
+                              if ( x > 0 &&( x + w < iWidth) && y > 0 && (y + h < iHeight) ) 
+                              {
+                                  msgObj.style.left = x + "px";
+                                  msgObj.style.top = y + "px";
+                              }
+                          }
+                      };
+                      document.onmouseup = function () 
+                      {
+                          if (moveable) 
+                          {
+                              document.onmousemove = docMouseMoveEvent; 
+                              document.onmouseup = docMouseUpEvent;
+                              moveable = false;
+                              moveX = 0;
+                              moveY = 0;
+                              moveTop = 0;
+                              moveLeft = 0;
+                          }
+                      };
+                  }
+              
+                  var closeBtn = tr.insertCell(-1);
+                  closeBtn.style.cssText = "cursor:pointer; padding:2px;background-color:" + titlebgcolor;
+                  closeBtn.innerHTML = "<span style='font-size:15pt; color:"+titlecolor+";'>×</span>";
+                  closeBtn.onclick = function()
+                  {
+                      document.body.removeChild(bgObj);
+                      document.body.removeChild(msgObj);
+                  }
+                  var msgBox = table.insertRow(-1).insertCell(-1);
+                  msgBox.style.cssText = "font:10pt '宋体';";
+                  msgBox.colSpan = 2;
+                  msgBox.innerHTML = msg;
+              
+                  // for compatibility of IE and FireFox
+                  function getEvent() 
+                  {
+                      return window.event || arguments.callee.caller.arguments[0];
+                  }
+              }
+         </script>
+ <!--end of onclick-->
+  
+<!-- resume part -->  
+<textarea class="hidden" name="content" id="content" >Creative and dependable Entry Level Web Developer with a Master degree from University of Waterloo and interdisciplinary competitiveness. Passionate about web application design and development. Broadly and deeply knowledgeable in a variety of programming languages as well as the principles and techniques of algorithms and website construction. Skilled in human factors design principles in web application UI.</textarea>
+<textarea class="hidden" name="skills" id="skills">
+<li>Web Technologies and Frameworks:	Angular JS, HTML5, CSS3.0, PHP	</li>
+<li>Scripts/UI:	JavaScript, JQuery, AJAX, BootStrap, SQL, Python </li>
+<li>Web Debug Tools and Server:	Chrome developer tools, XAMPP</li>
+<li> Versioning and other tools:	Git, Wordpress, Xcode, FileZilla, Matlab, Photoshop</li></textarea>
+<textarea class="hidden" name="education" id="education">University of Waterloo, Bachelor of Engineering in System Design Engineering<br></br>
+University of Macau,  Bachelor of Science in Electrical and Computer Engineering                                                                                 </textarea>
+ <textarea class="hidden" name="experience" id="experience">Research Writer/Reporter, Fairchild Television <br></br>Front-end developer, Pro-Flange Limited     </textarea>
+  <script>
+  var content=document.getElementById("content").value;//profile
+  var skills=document.getElementById("skills").value;
+  var education=document.getElementById("education").value;
+  var experience=document.getElementById("experience").value;
+</script>
+<div id="rotate">  
+  
+  
+		<a  onclick="alertWin('Skills',skills,600,300);" 
+       style="left: 66.8003px; top: 196.931px; font-size: 20px; opacity: 1.31031; z-index: 1; ">Skills</a>
+	   
+	    <a  onclick="alertWin('Profile',content,600,300);"
+        style="left: 83.5443px; top: 274.108px; font-size: 16px; opacity: 1.0726; z-index: 16;">Profile</a>
+		
+		<a  
+        onclick="alertWin('Education',education,600,300);" 
+        style="left: 151.624px; top: 274.168px; font-size: 18px; opacity: 1.71626; z-index: 2;">Education</a>
+		<a  
+        onclick="alertWin('Experience',experience,600,300);" 
+        style="left: 166.284px; top: 190.666px; font-size: 20px; opacity: 2.28765; z-index: 3;">Experience</a>
+		
+		<a  
+        onclick="alertWin('Certificate','testing',600,300);"  
+        style="left: 121.672px; top: 118.553px; font-size: 18px; opacity: 1.68462; z-index: 4;">Certificate</a><a  
+        onclick="alertWin('Awards','testing',600,300);"   
+        style="left: 65.203px; top: 116.999px; font-size: 15px; opacity: 0.932654; z-index: 5;">Awards</a><a  
+        onclick="alertWin('Skills',skills,600,300);"  
+        style="left: 42.4825px; top: 181.77px; font-size: 14px; opacity: 0.561321; z-index: 6;">Skills</a><a  
+        onclick="alertWin('Activities','testing',600,300);"   
+        style="left: 70.1705px; top: 268.292px; font-size: 14px; opacity: 0.483448; z-index: 7;">Activities</a><a  
+        onclick="alertWin('Hobby','testing',600,300);"  
+        style="left: 134.636px; top: 326.418px; font-size: 14px; opacity: 0.639426; z-index: 8;">Hobby</a><a  
+        onclick="alertWin('Language','testing',600,300);"  
+        style="left: 205.298px; top: 326.346px; font-size: 16px; opacity: 1.04024; z-index: 9;">Language</a><a  
+        onclick="alertWin('Model','testing',600,300);"   
+        style="left: 251.693px; top: 268.555px; font-size: 18px; opacity: 1.64081; z-index: 10;">Model</a><a  
+        onclick="alertWin('Social Media','testing',600,300);"   
+        style="left: 256.578px; top: 179.049px; font-size: 19px; opacity: 2.02372; z-index: 11;">Social Media</a><a  
+        onclick="alertWin('Profile',content,600,300);" 
+        style="left: 221.396px; top: 95.5245px; font-size: 18px; opacity: 1.69582; z-index: 12;">Profile</a><a  
+        onclick="alertWin('Education',education,600,300);"   
+        style="left: 163.845px; top: 51.2719px; font-size: 16px; opacity: 1.0543; z-index: 13;">Education</a><a  
+        onclick="alertWin('Experience',experience,600,300);"   
+        style="left: 109.802px; top: 62.6804px; font-size: 14px; opacity: 0.571931; z-index: 14;">Experience</a><a  
+        onclick="alertWin('Skills',skills,600,300);"   
+        style="left: 83.0539px; top: 123.996px; font-size: 13px; opacity: 0.30701; z-index: 15;">Skills</a><a  
+        onclick="alertWin('Social Media','testing',600,300);"   
+        style="left: 96.4704px; top: 210.312px; font-size: 13px; opacity: 0.207119; z-index: 0;">Social media</a><a  
+        onclick="alertWin('Awards','testing',600,300);" 
+        style="left: 143.893px; top: 287.237px; font-size: 13px; opacity: 0.240069; z-index: 17;">Awards</a><a  
+        onclick="alertWin('Hobby','testing',600,300);"   
+        style="left: 218.637px; top: 323.825px; font-size: 14px; opacity: 0.403942; z-index: 18;">Hobby</a><a  
+        onclick="alertWin('Model','testing',600,300);"  
+        style="left: 284.758px; top: 304.427px; font-size: 15px; opacity: 0.701391; z-index: 19;">Model</a><a  
+        onclick="alertWin('Certificate','testing',600,300);"   
+        style="left: 321.639px; top: 235.385px; font-size: 16px; opacity: 1.04951; z-index: 20;">Certificate</a><a  
+        onclick="alertWin('Activities','testing',600,300);"   
+        style="left: 316.249px; top: 143.814px; font-size: 16px; opacity: 1.1742; z-index: 21;">Activities</a><a  
+        onclick="alertWin('Education',education,600,300);"   
+        style="left: 273.019px; top: 68.0113px; font-size: 15px; opacity: 0.913281; z-index: 22;">Education</a><a  
+        onclick="alertWin('Skills',skills,600,300);"  
+        style="left: 206.819px; top: 41.8403px; font-size: 14px; opacity: 0.526185; z-index: 23;">Skills</a><a  
+        onclick="alertWin('Experience',experience,600,300);"  
+        style="left: 170.149px; top: 78.2344px; font-size: 13px; opacity: 0.248036; z-index: 24;">Experience</a><a  
+        onclick="alertWin('Language','testing',600,300);" 
+        style="left: 168.876px; top: 158.936px; font-size: 13px; opacity: 0.122123; z-index: 25;">Language</a><a  
+        onclick="alertWin('Skills',skills,600,300);"  
+        style="left: 216.187px; top: 237.781px; font-size: 13px; opacity: 0.138799; z-index: 26;">Skills</a><a  
+        onclick="alertWin('Profile',content,600,300);"  
+        style="left: 287.898px; top: 261.988px; font-size: 13px; opacity: 0.292117; z-index: 27;">Profile</a><a  
+        onclick="alertWin('Activities','testing',600,300);"   
+        style="left: 336.298px; top: 208.568px; font-size: 14px; opacity: 0.511776; z-index: 28;">Activities</a><a  
+        onclick="alertWin('Education',education,600,300);"  
+        style="left: 321.767px; top: 119.199px; font-size: 14px; opacity: 0.528531; z-index: 29;">Education</a><a  
+        onclick="alertWin('Hobby','testing',600,300);"   
+        style="left: 265.251px; top: 94.2193px; font-size: 13px; opacity: 0.278692; z-index: 30;">Hobby</a><a  
+        onclick="alertWin('Awards','testing',600,300);"   
+        style="left: 273.8px; top: 169.749px; font-size: 13px; opacity: 0.179773; z-index: 31;">Awards</a></div>  
+<!-- resume end -->  
+ 
+  
+</body>  
+</html> 

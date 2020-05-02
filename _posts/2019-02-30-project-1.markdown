@@ -1,0 +1,12 @@
+---
+layout: default
+modal-id: 1
+date: 2019-02-30
+img: tweebaa.png
+alt: image-alt
+project-date: January 2019
+client: Tweebaa Inc.(https://tweebaa.com/)
+category: App Development
+description: Developed mobile app in both IOS and android by using front end development toolkits. <a href="https://tweebaa.com/">Tweebaa App</a>. 
+
+---
