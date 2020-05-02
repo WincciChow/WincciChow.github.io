@@ -1,30 +1,75 @@
-# Sparanoid
-[![Built with Almace Scaffolding](https://d349cztnlupsuf.cloudfront.net/amsf-badge.svg)](https://sparanoid.com/lab/amsf/)
-[![CircleCI](https://circleci.com/gh/sparanoid/sparanoid.com.svg?style=svg)](https://circleci.com/gh/sparanoid/sparanoid.com)
-[![devDependency Status](https://david-dm.org/sparanoid/sparanoid.com/dev-status.svg)](https://david-dm.org/sparanoid/sparanoid.com#info=devDependencies)
+# Particle Jekyll Theme
 
-[Almace Scaffolding](https://github.com/sparanoid/almace-scaffolding/) running on [sparanoid.com](https://sparanoid.com/).
+![](./particle.jpg)
 
-## Setup
+This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
 
-```sh
-$ bundle install && yarn && grunt serve
+The Theme features:
+
+- Gulp
+- SASS
+- Sweet Scroll
+- Particle.js
+- BrowserSync
+- Font Awesome and Devicon icons
+- Google Analytics
+- Info Customization
+
+## Basic Setup
+
+1. [Install Jekyll](http://jekyllrb.com)
+2. Clone the particle theme: `git clone https://github.com/nrandecker/particle.git`
+3. Edit `_config.yml` to personalize your site.
+
+## Site and User Settings
+
+You have to fill some informations on `_config.yml` to customize your site.
+
+```
+# Site settings
+description: A blog about lorem ipsum dolor sit amet
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://localhost:3000" # the base hostname & protocol for your site
+
+# User settings
+username: Lorem Ipsum
+user_description: Anon Developer at Lorem Ipsum Dolor
+user_title: Anon Developer
+email: anon@anon.com
+twitter_username: lorem_ipsum
+github_username:  lorem_ipsum
+gplus_username:  lorem_ipsum
 ```
 
-## Author
+**Don't forget to change your url before you deploy your site!**
 
-**Tunghsiao Liu**
+## Color and Particle Customization
+- Color Customization
+  - Edit the sass variables
+- Particle Customization
+  - Edit the json data in particle function in app.js
+  - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
 
-- Twitter: @[tunghsiao](https://twitter.com/tunghsiao)
-- GitHub: @[sparanoid](https://github.com/sparanoid)
+## Running the blog in local
 
-## Licenses
+In order to compile the assets and run Jekyll on local you need to follow those steps:
 
-Following files, directories and their contents are copyright Tunghsiao Liu and licensed under a [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/). You may not reuse anything therein without permission:
+- Install [NodeJS](https://nodejs.org/)
+- Install [Jekyll](https://jekyllrb.com): `sudo gem install bundler jekyll`
+- Install [Yarn](https://yarnpkg.com/): `npm install -g yarn`
+- Install dependencies: `yarn`
+- Run: `gulp`
 
-- `./_app/_posts/**`
-- `./_app/*.{svg,png}`
+## Questions
 
-All other files and directories are licensed under the [MIT](https://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
+Having any issues file a [GitHub Issue](https://github.com/nrandecker/particle/issues/new).
 
-© Sparanoid, Inc., rights reserved as indicated above.
+## License
+
+This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme anyway you want.
+
+## Credits
+
+This theme was partially designed with the inspiration from these fine folks
+- [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
+- [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)
