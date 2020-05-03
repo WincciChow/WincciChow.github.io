@@ -1,28 +1,21 @@
 {
-  "name": "brittanychiang.com",
-  "version": "0.0.0",
-  "description": "Design-minded front-end software engineer focused on building beautiful interfaces and experiences",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bchiang7/bchiang7.github.io"
-  },
-  "homepage": "https://github.com/bchiang7/bchiang7.github.io",
-  "main": "gulpfile.js",
+  "name": "particle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "gulp serve",
-    "build": "gulp build"
+    "dev": "gulp"
   },
-  "author": "Brittany Chiang",
+  "author": "Nathan Randecker",
   "license": "ISC",
-  "devDependencies": {
-    "@nuscout/eslint-config": "^0.2.1",
-    "browser-sync": "^2.26.7",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-clean-css": "^3.10.0",
-    "gulp-eslint": "^6.0.0",
-    "gulp-imagemin": "6.0.0",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
-    "gulp-uglify": "3.0.2"
+    "gulp-uglify": "^3.0.1"
   }
 }
