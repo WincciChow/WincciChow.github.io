@@ -7,11 +7,11 @@ meta:
   keywords: "Jekyll, Pineapple"
 
 project:
-  title: "Red Pineapple"
-  type: "Jekyll"
-  url: "https://github.com/arnolds/pineapple"
+  title: "Crepe Me Up"
+  type: "UI Design"
+  url: "https://projects.invisionapp.com/share/KRV5A6MB45F#/screens"
   logo: "/assets/images/projects/redpineapple/logo.png"
-  tech: "HTML, CSS, Boostrap, Sass, JavaScript, jQuery, Jekyll"
+  tech: "Sketch, InVision"
 
 agency:
   title: "Red Pineapple Co"
