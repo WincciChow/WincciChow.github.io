@@ -9,7 +9,7 @@ twitter: "https://twitter.com/greenconcertina"
 github: "https://github.com/winccichow"
 
 # Site config
-baseurl: "https://winccichow.github.io/"
+baseurl: "https://winccichow.github.io"
 highlighter: rouge
 sass:
   sass_dir: assets/scss
