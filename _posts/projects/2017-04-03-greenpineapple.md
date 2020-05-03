@@ -23,7 +23,7 @@ images:
     url: "/assets/images/projects/greenpineapple/bewinccible.gif"
     alt: "Green Pineapple website on tablet, mobile and desktop"
   - image:
-    url: "/assets/images/projects/greenpineapple/model1.png"
+    url: "/assets/images/projects/greenpineapple/desktop.png"
     alt: "Green Pineapple website on a desktop device"
   - image:
     url: "/assets/images/projects/greenpineapple/model2.png"
