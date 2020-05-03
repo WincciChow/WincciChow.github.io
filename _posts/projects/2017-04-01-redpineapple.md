@@ -10,7 +10,7 @@ project:
   title: "Crepe Me Up"
   type: "UI Design"
   url: "https://projects.invisionapp.com/share/KRV5A6MB45F#/screens"
-  logo: "/assets/images/projects/redpineapple/logo.png"
+  logo: "/assets/images/projects/redpineapple/cre.png"
   tech: "Sketch, InVision"
 
 agency:
