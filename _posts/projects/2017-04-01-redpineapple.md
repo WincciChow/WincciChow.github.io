@@ -4,7 +4,7 @@ permalink: /:title/
 category: projects
 
 meta:
-  keywords: "Jekyll, Pineapple"
+  keywords: "UI Design"
 
 project:
   title: "Crepe Me Up"
@@ -16,18 +16,22 @@ project:
 agency:
   title: "Red Pineapple Co"
   url: "https://github.com/arnolds/pineapple"
-  year: "2017"
+  year: "2019"
 
 images:
   - image:
-    url: "/assets/images/projects/redpineapple/devices.jpg"
+    url: "/assets/images/projects/redpineapple/devices.png"
     alt: "Red Pineapple website on tablet, mobile and desktop"
   - image:
-    url: "/assets/images/projects/redpineapple/desktop.jpg"
+    url: "/assets/images/projects/redpineapple/styleguild-crepe.png"
     alt: "Red Pineapple website on a desktop device"
   - image:
-    url: "/assets/images/projects/redpineapple/mobile.jpg"
+    url: "/assets/images/projects/redpineapple/web1.png"
     alt: "Red Pineapple website on a mobile device"
+  - image:
+    url: "/assets/images/projects/redpineapple/web2.png"
+    alt: "Red Pineapple website on a mobile device"
+ 
 ---
 <p>Crepe Me Up is an mobile app UI design work for online ordering of crepe cakes. I adopted macaron color scheme since it is a symbol of sweetness.The color complements each other magnificently. I also did POP testing and wireframe design for this project.
    
