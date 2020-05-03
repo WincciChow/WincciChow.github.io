@@ -1,75 +1,29 @@
-# Particle Jekyll Theme
+# Almace Scaffolding
 
-![](./particle.jpg)
+[![Built with Almace Scaffolding](https://d349cztnlupsuf.cloudfront.net/amsf-badge.svg)](https://sparanoid.com/lab/amsf/)
+[![CircleCI](https://circleci.com/gh/sparanoid/almace-scaffolding.svg?style=svg)](https://circleci.com/gh/sparanoid/almace-scaffolding)
+[![devDependency Status](https://david-dm.org/sparanoid/almace-scaffolding/dev-status.svg)](https://david-dm.org/sparanoid/almace-scaffolding#info=devDependencies)
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/sparanoid/amsf)
 
-This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
+`AMSF`, a.k.a. **Almace Scaffolding**, a super-fast Jekyll framework fighting against the website obesity. It supports LiveReload, Sass, HTML minification, inlined stylesheets and more.
 
-The Theme features:
+-----
 
-- Gulp
-- SASS
-- Sweet Scroll
-- Particle.js
-- BrowserSync
-- Font Awesome and Devicon icons
-- Google Analytics
-- Info Customization
+## [Getting Started](https://sparanoid.com/lab/amsf/getting-started.html)
 
-## Basic Setup
+## Donate
 
-1. [Install Jekyll](http://jekyllrb.com)
-2. Clone the particle theme: `git clone https://github.com/nrandecker/particle.git`
-3. Edit `_config.yml` to personalize your site.
+Wanna buy me a cup of coffee? [Great](https://sparanoid.com/donate/).
 
-## Site and User Settings
+## Author
 
-You have to fill some informations on `_config.yml` to customize your site.
+**Tunghsiao Liu**
 
-```
-# Site settings
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:3000" # the base hostname & protocol for your site
+- Twitter: @[tunghsiao](https://twitter.com/tunghsiao)
+- GitHub: @[sparanoid](https://github.com/sparanoid)
 
-# User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Anon Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
-```
+## Licenses
 
-**Don't forget to change your url before you deploy your site!**
+All files and directories are licensed under the [MIT](https://opensource.org/licenses/mit-license.php) unless explicitly stated.
 
-## Color and Particle Customization
-- Color Customization
-  - Edit the sass variables
-- Particle Customization
-  - Edit the json data in particle function in app.js
-  - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
-
-## Running the blog in local
-
-In order to compile the assets and run Jekyll on local you need to follow those steps:
-
-- Install [NodeJS](https://nodejs.org/)
-- Install [Jekyll](https://jekyllrb.com): `sudo gem install bundler jekyll`
-- Install [Yarn](https://yarnpkg.com/): `npm install -g yarn`
-- Install dependencies: `yarn`
-- Run: `gulp`
-
-## Questions
-
-Having any issues file a [GitHub Issue](https://github.com/nrandecker/particle/issues/new).
-
-## License
-
-This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme anyway you want.
-
-## Credits
-
-This theme was partially designed with the inspiration from these fine folks
-- [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
-- [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)
+© Sparanoid, Inc.
