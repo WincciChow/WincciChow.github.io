@@ -9,7 +9,7 @@ meta:
 project:
   title: "Weather Forecast"
   type: "Jekyll"
-  url: "https://github.com/arnolds/pineapple"
+  url: "https://github.com/WincciChow/react-redux-weather"
   logo: "/assets/images/projects/yellowpineapple/logo.png"
   tech: "React, Redux, Boostrap, Openweather API"
 

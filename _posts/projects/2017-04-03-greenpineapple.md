@@ -9,7 +9,7 @@ meta:
 project:
   title: "Be Winccible"
   type: "Jekyll"
-  url: "https://github.com/arnolds/pineapple"
+  url: "https://github.com/WincciChow/creative-model-portfolio"
   logo: "/assets/images/projects/greenpineapple/logo.png"
   tech: "CSS Only, SCSS, UI/UX Design"
 

@@ -7,16 +7,16 @@ meta:
   keywords: "Jekyll, Pineapple"
 
 project:
-  title: "Aqua Pineapple"
-  type: "Jekyll"
-  url: "https://github.com/arnolds/pineapple"
+  title: "Vue Chat"
+  type: "Full Stack Development"
+  url: "https://github.com/WincciChow/chatroom-vue"
   logo: "/assets/images/projects/aquapineapple/logo.png"
-  tech: "HTML, CSS, Boostrap, Sass, JavaScript, jQuery, Jekyll"
+  tech: "Vue JS, Full Stack Development, Socket.io"
 
 agency:
   title: "Aqua Pineapple Co"
   url: "https://github.com/arnolds/pineapple"
-  year: "2018"
+  year: "2019"
 
 images:
   - image:
