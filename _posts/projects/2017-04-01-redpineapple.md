@@ -29,4 +29,6 @@ images:
     url: "/assets/images/projects/redpineapple/mobile.jpg"
     alt: "Red Pineapple website on a mobile device"
 ---
-<p>Pineapples are delicious tropical fruit. There are more than a hundred varieties of pineapples that grow in varying sizes. The plant is indigenous to South America and is said to originate from the area between southern Brazil and Paraguay.</p>
+<p>Crepe Me Up is an mobile app UI design work for online ordering of crepe cakes. I adopted macaron color scheme since it is a symbol of sweetness.The color complements each other magnificently. I also did POP testing and wireframe design for this project.
+   
+   I used Sketch for the Uer Interface Design part and created interactive mockup by InVision. You can check up the prototyping from this link on InVision. UI Design and Style Guildlines are showcaseing as followings.</p>
