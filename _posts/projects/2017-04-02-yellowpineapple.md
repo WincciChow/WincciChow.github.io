@@ -8,7 +8,7 @@ meta:
 
 project:
   title: "Weather Forecast"
-  type: "Jekyll"
+  type: "React-Redux"
   url: "https://github.com/WincciChow/react-redux-weather"
   logo: "/assets/images/projects/yellowpineapple/logo.png"
   tech: "React, Redux, Boostrap, Openweather API"
