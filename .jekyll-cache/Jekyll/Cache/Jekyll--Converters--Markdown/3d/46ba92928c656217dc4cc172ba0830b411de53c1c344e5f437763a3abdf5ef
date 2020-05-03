@@ -1,0 +1,56 @@
+I"®
+<p>This post shows all customized elements.
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+<h2 id="image">Image</h2>
+
+<p><img src="https://via.placeholder.com/768x480" alt="Placeholder" /></p>
+
+<h2 id="header">Header</h2>
+
+<h1 id="head-1">Head 1</h1>
+<h2 id="head-2">Head 2</h2>
+<h3 id="head-3">Head 3</h3>
+<h4 id="head-4">Head 4</h4>
+<h5 id="head-5">Head 5</h5>
+<h6 id="head-6">Head 6</h6>
+
+<h2 id="lists">Lists</h2>
+
+<p>Unordered list</p>
+
+<ul>
+  <li>I am the first unordered list item</li>
+  <li>I am the second unordered list item</li>
+  <li>I am the third unordered list item</li>
+</ul>
+
+<p>Ordered list</p>
+
+<ol>
+  <li>I am the first ordered list item</li>
+  <li>I am the second ordered list item</li>
+  <li>I contain an <code class="highlighter-rouge">inline code</code></li>
+</ol>
+
+<h2 id="code-block">Code block</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'hello, world'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'this is a really long statements, this is a really long statementsi, this is a really long statements'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="inline-code">Inline code</h2>
+
+<p>Ut enim ad minima veniam, <code class="highlighter-rouge">quis</code> nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, <code class="highlighter-rouge">vel</code> illum qui dolorem eum <code class="highlighter-rouge">fugiat</code> quo voluptas nulla pariatur?</p>
+
+<h2 id="blockquote">Blockquote</h2>
+
+<blockquote>
+  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae</p>
+</blockquote>
+
+<h2 id="paragraph">Paragraph</h2>
+
+<p>Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.</p>
+:ET
