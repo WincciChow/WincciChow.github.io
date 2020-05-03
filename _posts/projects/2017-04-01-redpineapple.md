@@ -33,6 +33,6 @@ images:
     alt: "Red Pineapple website on a mobile device"
  
 ---
-<p>Crepe Me Up is an mobile app UI design work for online ordering of crepe cakes. I adopted macaron color scheme since it is a symbol of sweetness.The color complements each other magnificently. I also did POP testing and wireframe design for this project.
+<p>Crepe Me Up is an mobile app UI design work for online ordering crepe cakes. I adopted macaron color scheme since it is a symbol of sweetness.The color complements each other magnificently. I also did POP testing and wireframe design for this project.
    
- <br><br>I used Sketch for the Uer Interface Design part and created interactive mockup by InVision. UI Design and Style Guildlines are showcaseing here.</p>
+ <br><br>I used Sketch for the User Interface Design part and created interactive mockup by InVision. UI Design and Style Guildlines are showcaseing here.</p>

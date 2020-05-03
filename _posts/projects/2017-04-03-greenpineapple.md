@@ -29,6 +29,7 @@ images:
     url: "/assets/images/projects/greenpineapple/model1.png"
     alt: "Green Pineapple website on a mobile device"
 ---
-<p>Be winccible is an online model porfolio project. I am personally a commercial model. So I am developing this porfolio for myself and adapt to my name "Wincci". It has a very creative fold out navigation along with the hamburger menu. Large type in web design is applied too.
+<p>Be winccible is an online model porfolio project. I am personally a commercial model. So I am developing this porfolio for myself with adapting to my name "Wincci".
+ It has a very creative fold out navigation along with the hamburger menu. Large Type is applied in the design as well.
    
   <br><br> This project demonstrates my learning of SCSS development and UI design principles. </p>

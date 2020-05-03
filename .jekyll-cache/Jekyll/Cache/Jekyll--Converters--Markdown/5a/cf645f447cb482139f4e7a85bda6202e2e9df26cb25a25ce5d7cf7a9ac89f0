@@ -1,0 +1,6 @@
+I"z<p>Vue Chat is a web application for group chat. It contains both client side and server side. The front-end part used Vue JS, while Node JS for the back-end side.
+The feature of communication from server to client is one of main factors in ensuring real-timeliness of client application. 
+<br /><br />This web application uses Socket.IO as client-server communication. Socket.IO is a JavaScript implementation to work with HTML 5 WebSockets.
+   
+  <br /><br /> This project began as a full stack development assignment to practice on JavaScript for both client side and server side. and also been optimized by my own UI design .</p>
+:ET
