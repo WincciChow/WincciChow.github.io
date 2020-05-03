@@ -14,7 +14,7 @@ project:
   tech: "React, Redux, Boostrap, Openweather API"
   
 role:
-   type:"React-Redux"
+   type: "React-Redux"
    
 agency:
   title: "Yellow Pineapple Co"

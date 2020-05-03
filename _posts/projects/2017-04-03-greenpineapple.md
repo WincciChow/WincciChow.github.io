@@ -14,7 +14,7 @@ project:
   tech: "CSS Only, SCSS, UI/UX Design"
   
 role:
-  type:"CSS, SCSS, UI/UX Design"
+  type: "CSS, SCSS, UI/UX Design"
 
 agency:
   title: "Green Pineapple Co"
