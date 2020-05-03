@@ -12,11 +12,14 @@ project:
   url: "https://github.com/WincciChow/creative-model-portfolio"
   logo: "/assets/images/projects/greenpineapple/logo.png"
   tech: "CSS Only, SCSS, UI/UX Design"
+  
+role:
+  type:"CSS, SCSS, UI/UX Design"
 
 agency:
   title: "Green Pineapple Co"
   url: "https://github.com/arnolds/pineapple"
-  year: "2017"
+  year: "2018"
 
 images:
   - image:

@@ -13,6 +13,9 @@ project:
   logo: "/assets/images/projects/aquapineapple/logo.png"
   tech: "Vue JS, Full Stack Development, Socket.IO"
 
+role:
+   type:"Vue JS, Full Stack Development, Socket.IO"
+   
 agency:
   title: "Aqua Pineapple Co"
   url: "https://github.com/arnolds/pineapple"

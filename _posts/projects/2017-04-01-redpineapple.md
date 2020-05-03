@@ -12,6 +12,9 @@ project:
   url: "https://projects.invisionapp.com/share/KRV5A6MB45F#/screens"
   logo: "/assets/images/projects/redpineapple/logo.png"
   tech: "Sketch, InVision"
+  
+role:
+  type:"UI Design"
 
 agency:
   title: "Red Pineapple Co"

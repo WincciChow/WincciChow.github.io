@@ -12,7 +12,10 @@ project:
   url: "https://github.com/WincciChow/react-redux-weather"
   logo: "/assets/images/projects/yellowpineapple/logo.png"
   tech: "React, Redux, Boostrap, Openweather API"
-
+  
+role:
+   type:"React-Redux"
+   
 agency:
   title: "Yellow Pineapple Co"
   url: "https://github.com/arnolds/pineapple"
