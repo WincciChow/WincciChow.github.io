@@ -14,7 +14,7 @@ project:
   tech: "Vue JS, Full Stack Development, Socket.IO"
 
 role:
-   type:"Vue JS, Full Stack Development, Socket.IO"
+   type: "Vue JS, Full Stack Development, Socket.IO"
    
 agency:
   title: "Aqua Pineapple Co"
