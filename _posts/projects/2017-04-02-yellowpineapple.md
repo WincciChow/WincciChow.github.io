@@ -24,4 +24,6 @@ images:
     alt: "Yellow Pineapple website on tablet, mobile and desktop"
  
 ---
-<p>Using React-Redux for a weather forecast web application maybe a bit overkilled. But I just use this classic react project to demonstrates my knowledge of React-Redux and responsive design. This project is still ongoing. I am working on how to use canvas in React. So that I can make the background change according to different weather conditions!</p>
+<p>Using React-Redux for a weather forecast web application maybe a bit overkilled. But I just use this classic react project to demonstrates my knowledge of React-Redux and responsive design.
+<br><br> This project is still ongoing. I am working on how to use canvas in React. So that I can make the background change according to different weather conditions! 
+Check up my developemnt from [github](https://github.com/WincciChow/react-redux-weather). </p>
