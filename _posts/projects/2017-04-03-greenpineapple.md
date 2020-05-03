@@ -20,13 +20,15 @@ agency:
 
 images:
   - image:
-    url: "/assets/images/projects/greenpineapple/devices.jpg"
+    url: "/assets/images/projects/greenpineapple/bewinccible.gif"
     alt: "Green Pineapple website on tablet, mobile and desktop"
   - image:
-    url: "/assets/images/projects/greenpineapple/desktop.jpg"
+    url: "/assets/images/projects/greenpineapple/model1.png"
     alt: "Green Pineapple website on a desktop device"
   - image:
-    url: "/assets/images/projects/greenpineapple/mobile.jpg"
+    url: "/assets/images/projects/greenpineapple/model2.png"
     alt: "Green Pineapple website on a mobile device"
 ---
-<p>The pineapple is made up of mostly water (86%) and carbohydrates (13%), with almost no fat or protein. It has nutrients, vitamins, and minerals, including copper, potassium, calcium, magnesium, manganese, vitamin C, thiamin, B6, beta-carotene, and folate as well as soluble and insoluble fiber and bromelain.</p>
+<p>Be winccible is an online model porfolio project. I am personally a commercial model. So I am developing this porfolio for myself and adapt to my name "Wincci". It has a very creative fold out navigation along with the hamburger menu. Large type in web design is applied too.
+   
+   This project demonstrates my learning of SCSS development. </p>
