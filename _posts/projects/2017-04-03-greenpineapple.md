@@ -4,14 +4,14 @@ permalink: /:title/
 category: projects
 
 meta:
-  keywords: "Jekyll, Pineapple"
+  keywords: "SCSS, UI"
 
 project:
-  title: "Green Pineapple"
+  title: "Be Winccible"
   type: "Jekyll"
   url: "https://github.com/arnolds/pineapple"
   logo: "/assets/images/projects/greenpineapple/logo.png"
-  tech: "HTML, CSS, Boostrap, Sass, JavaScript, jQuery, Jekyll"
+  tech: "CSS Only, SCSS, UI/UX Design"
 
 agency:
   title: "Green Pineapple Co"
