@@ -20,14 +20,12 @@ agency:
 
 images:
   - image:
-    url: "/assets/images/projects/aquapineapple/devices.jpg"
+    url: "/assets/images/projects/aquapineapple/chat1.png"
     alt: "Aqua Pineapple website on tablet, mobile and desktop"
   - image:
-    url: "/assets/images/projects/aquapineapple/desktop.jpg"
+    url: "/assets/images/projects/aquapineapple/chat2.png"
     alt: "Aqua Pineapple website on a desktop device"
-  - image:
-    url: "/assets/images/projects/aquapineapple/mobile.jpg"
-    alt: "Aqua Pineapple website on a mobile device"
+  
 ---
 <p>Vue chat is a web application for goup chat. It contains both client side and server side parts. The frontend part used Vue Js, whole node js in the backend side.The feature of communication from server to client is one of main factors in ensuring real-timeliness of client application. <br><br>This web application uses socket.io as client-server communication. Socket.IO is JavaScript implementation to work with HTML 5 WebSockets.
    
