@@ -20,10 +20,10 @@ agency:
 
 images:
   - image:
-    url: "/assets/images/projects/aquapineapple/chat1.png"
+    url: "/assets/images/projects/aquapineapple/chat_1.png"
     alt: "Aqua Pineapple website on tablet, mobile and desktop"
   - image:
-    url: "/assets/images/projects/aquapineapple/chat2.png"
+    url: "/assets/images/projects/aquapineapple/chat_2.png"
     alt: "Aqua Pineapple website on a desktop device"
   
 ---
