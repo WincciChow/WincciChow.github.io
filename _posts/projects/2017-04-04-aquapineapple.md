@@ -29,4 +29,6 @@ images:
     url: "/assets/images/projects/aquapineapple/mobile.jpg"
     alt: "Aqua Pineapple website on a mobile device"
 ---
-<p>In many tropical countries, pineapple is prepared and sold on roadsides as a snack. It is sold whole or in halves with a stick inserted. Chunks of pineapple are used in desserts such as fruit salad, as well as in some savory dishes, including pizza toppings, or as a grilled ring on a hamburger.</p>
+<p>Vue chat is a web application for goup chat. It contains both client side and server side parts. The frontend part used Vue Js, whole node js in the backend side.The feature of communication from server to client is one of main factors in ensuring real-timeliness of client application. <br><br>This web application uses socket.io as client-server communication. Socket.IO is JavaScript implementation to work with HTML 5 WebSockets.
+   
+   This project began as a full stack development assignment to practice on JavaScript for both client side and server side. and this UI design of it is also by myself.</p>
