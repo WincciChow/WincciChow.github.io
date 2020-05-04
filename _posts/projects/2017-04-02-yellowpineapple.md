@@ -25,6 +25,9 @@ images:
   - image:
     url: "/assets/images/projects/yellowpineapple/weather.gif"
     alt: "Yellow Pineapple website on tablet, mobile and desktop"
+  - image:
+      url: "/assets/images/projects/yellowpineapple/iPad.png"
+      alt: "Yellow Pineapple website on tablet, mobile and desktop"
  
 ---
 <p>Using React-Redux for a weather forecast web App maybe a bit overkilled. I just used this classic react assignment to demonstrate my knowledge of React-Redux.
