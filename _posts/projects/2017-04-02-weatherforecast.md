@@ -14,7 +14,7 @@ project:
   tech: "React, Redux, Boostrap, Openweather API, Canvas, Skycons"
   
 role:
-   type: "React-Redux"
+   type: "Front End Developer"
    
 agency:
   title: "Yellow Pineapple Co"

@@ -14,7 +14,7 @@ project:
   tech: "Sketch, InVision"
   
 role:
-  type: "UI Design"
+  type: "UI Designer"
 
 agency:
   title: "Red Pineapple Co"
