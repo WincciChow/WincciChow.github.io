@@ -26,11 +26,9 @@ images:
     url: "/assets/images/projects/myflashexpress/my1.gif"
     alt: "Aqua Pineapple website on tablet, mobile and desktop"
   - image:
-    url: "/assets/images/projects/myflash/flash2.gif"
+    url: "/assets/images/projects/myflashexpress/my2.png"
     alt: "Aqua Pineapple website on a desktop device"
-  - image:
-    url: "/assets/images/projects/myflash/flash3.gif"
-    alt: "Aqua Pineapple website on a desktop device"
+
   
 ---
 <p>This is the official website for a flash delivery company. 
