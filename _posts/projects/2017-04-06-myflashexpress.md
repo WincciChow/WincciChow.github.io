@@ -10,7 +10,7 @@ project:
   title: "M.Y Flash Express"
   type: "Front End Development"
   url: "https://www.myflashexpress.com/"
-  logo: "/assets/images/projects/myflash/logo.png"
+  logo: "/assets/images/projects/myflashexpress/logo.png"
   tech: "JQuery, Javascript, HTML5, CSS3, React, NUXT.JS"
 
 role:
