@@ -23,7 +23,7 @@ agency:
 
 images:
   - image:
-    url: "/assets/images/projects/myflash/my1.gif"
+    url: "/assets/images/projects/myflashexpress/my1.gif"
     alt: "Aqua Pineapple website on tablet, mobile and desktop"
   - image:
     url: "/assets/images/projects/myflash/flash2.gif"
