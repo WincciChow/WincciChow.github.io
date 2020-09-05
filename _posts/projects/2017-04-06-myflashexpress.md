@@ -1,0 +1,37 @@
+---
+layout: project
+permalink: /:title/
+category: projects
+
+meta:
+  keywords: "html5,react"
+
+project:
+  title: "M.Y Flash Technology"
+  type: "Front End Development"
+  url: "http://www.myflashtechnology.com/"
+  logo: "/assets/images/projects/myflash/logo.png"
+  tech: "JQuery, Javascript, HTML5, CSS3, React, NUXT.JS"
+
+role:
+   type: "Frontend Developer"
+   
+agency:
+  title: "Aqua Pineapple Co"
+  url: "https://github.com/arnolds/pineapple"
+  year: "2020"
+
+images:
+  - image:
+    url: "/assets/images/projects/myflash/my1.gif"
+    alt: "Aqua Pineapple website on tablet, mobile and desktop"
+  - image:
+    url: "/assets/images/projects/myflash/flash2.gif"
+    alt: "Aqua Pineapple website on a desktop device"
+  - image:
+    url: "/assets/images/projects/myflash/flash3.gif"
+    alt: "Aqua Pineapple website on a desktop device"
+  
+---
+<p>This is a landing page for a local technology company. Lots of Javascript spacial effects and css animations were applied.
+It also used PHP to build the contact form.</p>
