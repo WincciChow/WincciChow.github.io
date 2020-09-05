@@ -7,9 +7,9 @@ meta:
   keywords: "html5,react"
 
 project:
-  title: "M.Y Flash Technology"
+  title: "M.Y Flash Express"
   type: "Front End Development"
-  url: "http://www.myflashtechnology.com/"
+  url: "https://www.myflashexpress.com/"
   logo: "/assets/images/projects/myflash/logo.png"
   tech: "JQuery, Javascript, HTML5, CSS3, React, NUXT.JS"
 
@@ -33,5 +33,8 @@ images:
     alt: "Aqua Pineapple website on a desktop device"
   
 ---
-<p>This is a landing page for a local technology company. Lots of Javascript spacial effects and css animations were applied.
-It also used PHP to build the contact form.</p>
+<p>This is the official website for a flash delivery company. 
+It combines a landing page by React.JS and NUXT.js, as well as a mobile website for our delivery service. This whole project 
+has lots of e-commerce functions such as order, payment, google services, login and third party login. Both the clients and drivers could 
+use the same website to place order and delivery order. It has a completed management system to manage the order, in order to guarantee
+the fast delivery speed.</p>
